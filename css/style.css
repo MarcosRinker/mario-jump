@@ -3,54 +3,93 @@
     padding: 0;
     box-sizing: border-box;
 }
-.game-board{
-    width: 80%;
+
+.game-board {
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid rgb(35, 158, 35);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
 }
-.pipe{
+
+.pipe {
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 2s infinite linear;
+    animation: pipe-animation 1.5s infinite linear;
+
 }
-.mario{
+
+.mario {
     width: 150px;
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
 }
-.jump{
-    animation: jump 500ms  ease-out;
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.nuvens {
+    width: 2200px;
+    display: flex;
+    position: absolute;
+    animation: clounds-animation 10s infinite linear;
+}
+
+
+.clounds {
+    width: 550px;
+}
+
+.clounds2 {
+    width: 550px;
+    margin-left: 1100px;
 }
 
 /*animação do tubo*/
 @keyframes pipe-animation {
-    from{
+    from {
         right: -80px;
     }
-    to{
+
+    to {
         right: 100%;
     }
 }
+
 /*animação mario*/
 @keyframes jump {
-    0%{
+    0% {
         bottom: 0;
     }
-    40%{
+
+    40% {
         bottom: 180px;
     }
-    50%{
+
+    50% {
         bottom: 180px;
     }
-    60%{
+
+    60% {
         bottom: 180px;
     }
-    100%{
+
+    100% {
         bottom: 0;
     }
 }
 
+/*animação nuvens*/
+@keyframes clounds-animation {
+    from {
+        right: -2200px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
